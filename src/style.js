@@ -1,0 +1,140 @@
+import { StyleSheet } from "react-native";
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    paddingBottom: 20,
+  },
+  mainHeaderContainer: {
+    width: "100%",
+    // backgroundColor: "#ccc",
+    paddingVertical: 30,
+    alignItems: "center",
+    borderEndEndRadius: 50,
+    borderBottomStartRadius: 50,
+  },
+  mainHeader: {
+    color: "black",
+    fontSize: 28,
+    fontWeight: "bold",
+    textTransform: "uppercase",
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: "#aeaeae",
+    width: "90%",
+    marginVertical: 10,
+    height: 50,
+    padding: 10,
+    borderRadius: 5,
+  },
+  submitBtn: {
+    width: "50%",
+    backgroundColor: "#000",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 20,
+    borderRadius: 5,
+  },
+  text: {
+    color: "white",
+    fontSize: 18,
+    textTransform: "uppercase",
+  },
+  dividerLine: {
+    height: 1,
+    width: "90%",
+    backgroundColor: "#aeaeae",
+    marginVertical: 15,
+  },
+  filterContainer: {
+    flexDirection: "row",
+    width: "90%",
+    justifyContent: "space-between",
+  },
+  filterBtn: {
+    width: "30%",
+    backgroundColor: "#ffffff",
+    height: 40,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 5,
+    borderWidth: 1,
+    borderColor: "black",
+  },
+  filterText: {
+    color: "black",
+    fontSize: 15,
+  },
+  activeFilterBtn: {
+    width: "30%",
+    backgroundColor: "black",
+    height: 40,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 5,
+    borderWidth: 1,
+    borderColor: "black",
+  },
+  activeFilterText: {
+    color: "white",
+    fontSize: 15,
+  },
+  todosContainer: {
+    marginTop: 10,
+  },
+  todoContainer: {
+    backgroundColor: "#fff", 
+    padding: 15,
+    width: "100%",
+    minHeight: 70,
+    alignSelf: "center",
+    borderColor: "#ddd",
+    borderWidth: 1,
+    borderRadius: 8,
+    marginVertical: 10,
+    shadowColor: "#000",
+    shadowOpacity: 0.1,
+    shadowRadius: 3,
+    elevation: 3, // Adds a subtle shadow on Android
+  },
+  todoTitle: {
+    fontWeight: "bold",
+    fontSize: 16,
+  },
+  todoHeaderContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center", 
+  },
+  todoDescription: {
+    marginVertical: 10,
+    color: "#555",
+  },
+  doneTodo: {
+    textDecorationLine: "line-through",
+  },
+  error: {
+    borderColor: "red",
+    borderWidth: 1,
+    backgroundColor: "#ffe6e6",
+    color: "red",
+    padding: 10,
+    borderRadius: 5,
+    textAlign: "center",
+    marginBottom: 10,
+    fontWeight: "bold",
+    fontSize: 16,
+  },
+  delete: {
+    marginLeft: 'auto',
+    color: "red",
+    padding: 10,
+    textAlign: "center",
+    fontSize: 20,
+  }
+});
+export default styles;
