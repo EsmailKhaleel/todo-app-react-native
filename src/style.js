@@ -9,17 +9,23 @@ const styles = StyleSheet.create({
   },
   mainHeaderContainer: {
     width: "100%",
-    // backgroundColor: "#ccc",
-    paddingVertical: 30,
+    backgroundColor: "black",
+    paddingVertical: 40,
     alignItems: "center",
-    borderEndEndRadius: 50,
-    borderBottomStartRadius: 50,
+    borderBottomLeftRadius: 50,
+    borderBottomRightRadius: 50, 
   },
   mainHeader: {
     color: "black",
     fontSize: 28,
     fontWeight: "bold",
     textTransform: "uppercase",
+  },
+  myName: {
+    color: "white",
+    fontSize: 28,
+    fontWeight: "bold",
+    textAlign: "center",
   },
   input: {
     borderWidth: 1,

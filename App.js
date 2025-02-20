@@ -41,8 +41,9 @@ export default function TodoApp() {
   return (
     <View style={styles.container}>
       <View style={styles.mainHeaderContainer}>
-        <Text style={styles.mainHeader}>Task Management</Text>
+        <Text style={styles.myName}>Esmail khaleel Shaaban</Text>
       </View>
+        <Text style={styles.mainHeader}>Task Management</Text>
 
       <TextInput
         placeholder="Enter Task Title"
