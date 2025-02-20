@@ -135,12 +135,19 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 16,
   },
+  DoneDeleteContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+  markAsDone: {
+    color: '#c79c02',
+    padding: 10,
+    fontSize: 16,
+  },
   delete: {
-    marginLeft: 'auto',
     color: "red",
     padding: 10,
-    textAlign: "center",
-    fontSize: 20,
+    fontSize: 16,
   }
 });
 export default styles;

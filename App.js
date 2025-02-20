@@ -35,9 +35,21 @@ export default function TodoApp() {
     }
   };
   console.log(filter);
+
   const handleDelete = (id) => {
     setTodos((prevState) => prevState.filter((todo) => todo.id !== id));
   };
+  const handleDone = (id) => {
+    const updatedTodos = [...todos];
+    const updatedTodoIndex = updatedTodos.findIndex(todo => todo.id === id);
+    const updatedTodo = {
+      ...updatedTodos[updatedTodoIndex],
+    };
+    updatedTodo.status = 'Done';
+    updatedTodos[updatedTodoIndex] = updatedTodo;
+    console.log(updatedTodo);
+    setTodos(updatedTodos);
+  }
   return (
     <View style={styles.container}>
       <View style={styles.mainHeaderContainer}>
@@ -77,7 +89,7 @@ export default function TodoApp() {
         {todos
           .filter((todo) => filter === 'All' || todo.status === filter)
           .map((todo) => (
-            <TodoItem key={todo.id} todo={todo} onDelete={() => handleDelete(todo.id)} />
+            <TodoItem key={todo.id} todo={todo} onDelete={() => handleDelete(todo.id)}  onDone={() => handleDone(todo.id)} />
           ))}
       </ScrollView>
     </View>
