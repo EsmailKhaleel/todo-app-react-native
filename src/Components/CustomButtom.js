@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../style'
-import { TouchableOpacity, Text } from 'react-native'
+import { TouchableOpacity, Text } from 'react-native';
 
 function CustomButtom({ status, filter, setFilter }) {
     return (

@@ -7,6 +7,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingBottom: 20,
   },
+  centered: {
+    justifyContent: 'center',
+  },
   mainHeaderContainer: {
     width: "100%",
     backgroundColor: "black",
@@ -38,7 +41,7 @@ const styles = StyleSheet.create({
   },
   submitBtn: {
     width: "50%",
-    backgroundColor: "#000",
+    backgroundColor: "#2ECC71",
     justifyContent: "center",
     alignItems: "center",
     padding: 20,
@@ -89,7 +92,8 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   todosContainer: {
-    marginTop: 10,
+    width: '95%',
+    margin: 10,
   },
   todoContainer: {
     backgroundColor: "#fff", 
@@ -104,7 +108,7 @@ const styles = StyleSheet.create({
     shadowColor: "#000",
     shadowOpacity: 0.1,
     shadowRadius: 3,
-    elevation: 3, // Adds a subtle shadow on Android
+    elevation: 3,
   },
   todoTitle: {
     fontWeight: "bold",
