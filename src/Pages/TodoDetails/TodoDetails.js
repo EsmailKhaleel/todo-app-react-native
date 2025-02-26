@@ -2,18 +2,27 @@ import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { useRoute, useNavigation } from '@react-navigation/native';
 import styles from './DetailsStyle';
+import { useDispatch } from 'react-redux';
+import { deleteTodo, updateTodo } from '../../StateManagement/Slices/mainSlice';
 
 export default function TodoDetails() {
   const route = useRoute();
   const navigation = useNavigation();
-  const {todo, onDelete, onDone} = route.params;
+  const { todo } = route.params;
+  const dispatch = useDispatch();
+
   const formattedDate = new Date(todo.date).toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'short',
         day: '2-digit'
     });
-    // console.log(onDelete, onDone, todo)
-  return (
+    const onDelete = (id) => {
+      dispatch(deleteTodo(id));
+  };
+
+  const onDone = (id) => {
+      dispatch(updateTodo(id));
+  };  return (
     <View style={styles.container}>
       <Text style={styles.mainHeader}>Task Details</Text>
 

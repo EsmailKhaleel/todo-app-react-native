@@ -3,12 +3,17 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export const saveTodos = async (newTodos) => {
     try {
+        if (!Array.isArray(newTodos)) {
+            console.error("Error: newTodos is not an array", newTodos);
+            return;
+        }
         await AsyncStorage.setItem('todos', JSON.stringify(newTodos));
         console.log("Data Stored Successfully ^-^")
     } catch (error) {
         console.error('Error saving todos:', error);
     }
 };
+
 export const loadTodos = async () => {
     try {
         const storedData = await AsyncStorage.getItem('todos');
